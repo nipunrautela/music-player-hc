@@ -1,0 +1,68 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:untitled12/main.dart';
+
+class AppBarPage extends StatefulWidget {
+  const AppBarPage({Key? key}) : super(key: key);
+
+  @override
+  _AppBarPageState createState() => _AppBarPageState();
+}
+
+class _AppBarPageState extends State<AppBarPage> {
+  int _selectedIndex=0;
+  PageController pageController= PageController();
+
+
+  void onTapped(int index){
+    setState(() {
+      _selectedIndex = index;
+    });
+    pageController.animateToPage(index,
+        duration: Duration(milliseconds: 1000), curve: Curves.easeIn);
+  }
+
+  @override
+  Widget build(BuildContext context) => DefaultTabController(
+    length: 4,
+    child: Scaffold(
+    appBar: AppBar(
+      title: Text("MusicBox"),
+      titleTextStyle: TextStyle(color: Colors.black),
+
+      leading: IconButton(
+      icon: Icon(Icons.menu),
+      onPressed: () {},
+      ),
+      actions: [
+        IconButton(
+        icon: Icon(Icons.settings),
+          onPressed: () {},
+        ),
+      ],
+      backgroundColor: Colors.white,
+  ),
+    body: PageView(
+      controller: pageController,
+      children: [
+        Container( color: Colors.white),
+        Container( color: Colors.white),
+        Container( color: Colors.white),
+        Container( color: Colors.white),
+      ],
+    ),
+      bottomNavigationBar: BottomNavigationBar(
+          items: const<BottomNavigationBarItem>[
+            BottomNavigationBarItem(icon: Icon(Icons.home)),
+            BottomNavigationBarItem(icon: Icon(Icons.search)),
+            BottomNavigationBarItem(icon: Icon(Icons.list_alt)),
+            BottomNavigationBarItem(icon: Icon(Icons.person)),
+      ],
+      currentIndex: _selectedIndex,
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.grey,
+        onTap: onTapped,
+      ),
+    ),
+  );
+}
