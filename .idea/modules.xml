@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/music_player.iml" filepath="$PROJECT_DIR$/music_player.iml" />
-      <module fileurl="file://$PROJECT_DIR$/android/music_player_android.iml" filepath="$PROJECT_DIR$/android/music_player_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/music-player-hc.iml" filepath="$PROJECT_DIR$/.idea/music-player-hc.iml" />
     </modules>
   </component>
 </project>

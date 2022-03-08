@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'AppBar_Page.dart';
+import 'screens/appbar_page.dart';
 
-void main() => runApp(new MyApp());
-
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -11,8 +10,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData.light(),
-      home: AppBarPage(),
+      home: const AppBarPage(),
     );
   }
 }
