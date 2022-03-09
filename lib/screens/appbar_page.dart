@@ -60,19 +60,19 @@ class _AppBarPageState extends State<AppBarPage> {
           bottomNavigationBar: BottomNavigationBar(
             items: const <BottomNavigationBarItem>[
               BottomNavigationBarItem(
-                label: "something",
+                label: "Home",
                 icon: Icon(Icons.home),
               ),
               BottomNavigationBarItem(
-                label: "something",
+                label: "Search",
                 icon: Icon(Icons.search),
               ),
               BottomNavigationBarItem(
-                label: "something",
+                label: "Saved",
                 icon: Icon(Icons.list_alt),
               ),
               BottomNavigationBarItem(
-                label: "something",
+                label: "Profile",
                 icon: Icon(Icons.person),
               ),
             ],
